@@ -1,0 +1,63 @@
+.Header{
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 25px;
+
+}
+
+.HeaderNav a{
+    color: black;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0 8px;
+    padding: 3px;
+    text-decoration: none;
+}
+
+.Form {
+    display: flex;
+    flex-direction: column;
+    max-width: 375px;
+
+
+}
+
+.UserProfile {
+    border: 1px solid black;
+    border-radius:4px;
+    padding: 20px;
+    max-width: 375px;
+
+
+
+}
+
+
+  
+
+  .feedContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+  }
+  
+  .PostCard {
+    width: 250px;
+    height: 250px;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .PostCard:hover {
+    transform: scale(1.05); /* Slightly scale up the card on hover */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Increase the shadow and blur on hover */
+    background: linear-gradient(135deg, #a777e3, #ff7f50);  /* Change the gradient colors on hover */
+  }
