@@ -70,14 +70,7 @@ export default function MyApp({Component, pageProps}){
                         })
 
 
-
-                    
-
-                    
-
-               
-                
-        
+  
     },
     [setError,setIsLoggedIn,setUserInformation]
     
@@ -167,15 +160,6 @@ export default function MyApp({Component, pageProps}){
         }
     }, [appInitialized]);
     
-
-
-
-
-
-   
-    
-
-
 
 
 

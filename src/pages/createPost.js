@@ -10,7 +10,7 @@ import {
   uploadBytes
 } from "firebase/storage";
 
-import styles from './CreatePostPage.module.css';
+import styles from './createPostPage.module.css';
 
 export default function CreatePost({ isLoggedIn, userInformation }) {
   const router = useRouter();

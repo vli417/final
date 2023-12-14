@@ -13,11 +13,11 @@ export default function Login({ isLoggedIn, loginUser }) {
   return (
     <main className={styles.main}>
       <h1>Login</h1>
-      <LoginForm loginUser={loginUser} /> {/* LoginForm directly included */}
+      <LoginForm loginUser={loginUser} /> {}
     </main>
   );
 }
 
-// Inside your LoginForm component JSX
+
 
 

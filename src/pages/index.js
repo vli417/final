@@ -1,8 +1,8 @@
-
+import styles from '../app/globals.css';
 import { useEffect, useState } from 'react';
 import { useRouter } from "next/router";
 import UserProfileCard from '@/app/components/UserProfileCard';
-import styles from '../app/globals.css';
+
 
 
 

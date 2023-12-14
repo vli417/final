@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react';
 import { onSnapshot, getFirestore, collection, addDoc,query,orderBy } from "firebase/firestore";
 import {  } from 'firebase/firestore';
 import PostCard from '@/app/components/PostCard';
+
+
 import styles from '@/app/components/components.module.css';
 
 
@@ -32,6 +34,7 @@ const FeedPage = () => {
 
     
     <div className={styles.feedContainer}>
+        <h1 className={styles.headerStyle}>ReelTalk</h1>
      
       {posts.map(post => (
         <PostCard key={post.id} post={post} />
