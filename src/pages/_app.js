@@ -23,19 +23,18 @@ export default function MyApp({Component, pageProps}){
     const [error, setError] = useState(null);
     
 
+    
     const createUser = useCallback(
         
         async (e)=>{
             e.preventDefault();
-            //Assign Email and Password to variables from form
-            //const name = e.currentTarget.name.value;
             const username = e.currentTarget.username.value;
             const email = e.currentTarget.email.value;
             const password = e.currentTarget.password.value;
-            
             const auth = getAuth();
             const db = getFirestore();
             let user;
+
             await createUserWithEmailAndPassword(auth, email, password)
                 .then((userCredential) => {
                     user = userCredential.user;
@@ -51,20 +50,18 @@ export default function MyApp({Component, pageProps}){
             await addDoc(collection(db, "users"), {
                         
                         username: username, 
-                        userId: user.uid// Include the username in the Firestore data
-                         // Add other user data as needed
+                        userId: user?.uid,
                      })
 
                         .then(()=>{
                             const userToSet = {...user, username}
 
                             setIsLoggedIn(true);
-                         //provide some information about the user via setStat
                             setUserInformation(userToSet);
-                            //clear any errors
                             setError(null);
 
                         })
+
                         .catch((error)=>{
                             const errorCode = error.code;
                             const errorMessage = error.message;
@@ -86,6 +83,12 @@ export default function MyApp({Component, pageProps}){
     
      
     );
+
+
+    
+
+
+   
 
     const loginUser = useCallback(
         (e)=>{

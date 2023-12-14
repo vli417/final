@@ -1,23 +1,23 @@
 
 
-import styles from './components.module.css'
 
-const UserProfileCard = ({user}) => {
-    console.log('Username:', user?.username); 
-    console.log("User Object in UserProfileCard:", user); 
-    return(
-        <div className={styles.UserProfile}>
-            <p>Username: {user?.username}</p>
-            <p>Email: {user?.email}</p>
-            
-            
+import styles from './components.module.css';
 
-        </div>
-    );
+const UserProfileCard = ({ user }) => {
+  return (
+    <div className={styles.centeredContainer}>
+      <div className={styles.UserProfile}>
+        <h1>User Profile</h1>
+       
+        <p>Username: {user?.username}</p>
+        
+        <p>Email: {user?.email}</p>
+      </div>
+    </div>
+  );
 };
 
 export default UserProfileCard;
-
 
 
 

@@ -2,9 +2,10 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from "next/router";
 import UserProfileCard from '@/app/components/UserProfileCard';
+import styles from '../app/globals.css';
 
 
-//import firebaseConfig from "@/app/components/firebaseConfig";
+
 
 
 export default function UserProfile({isLoggedIn, userInformation}){
@@ -25,9 +26,12 @@ export default function UserProfile({isLoggedIn, userInformation}){
     return (
         
         <main> 
-            <h1>User Profile</h1>
+
+            
             <UserProfileCard user={userInformation} />
         </main> 
     ); 
 }
+
+
 

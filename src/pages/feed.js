@@ -1,16 +1,19 @@
 
 import { useEffect, useState } from 'react';
 
-import { onSnapshot, getFirestore, collection, addDoc } from "firebase/firestore";
+import { onSnapshot, getFirestore, collection, addDoc,query,orderBy } from "firebase/firestore";
 import {  } from 'firebase/firestore';
 import PostCard from '@/app/components/PostCard';
 import styles from '@/app/components/components.module.css';
+
+
 
 
 const FeedPage = () => {
   const [posts, setPosts] = useState([]);
   const db = getFirestore();
 
+  
   useEffect(() => {
    
     const unsubscribe = onSnapshot(collection(db, "posts"), (snapshot) => {
@@ -24,8 +27,12 @@ const FeedPage = () => {
     return () => unsubscribe;
   }, []);
 
+  
   return (
+
+    
     <div className={styles.feedContainer}>
+     
       {posts.map(post => (
         <PostCard key={post.id} post={post} />
       ))}
@@ -33,7 +40,6 @@ const FeedPage = () => {
     
   );
 
- 
 };
 
 export default FeedPage;
